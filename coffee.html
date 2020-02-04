@@ -54,19 +54,39 @@
 
     const revenueMessage = document.querySelector('#revenue');
 
+  
+    // const coffee_machine = changePicture('static/coffee_machine.jpg')
+    // const coffee_mug = changePicture('static/coffee_mug.jpg')
+    // const coffee_beans = changePicture('static/coffee_beans.jpg')
+
+    const coffee_machine = () => {
+            coffeeImage.setAttribute('src', 'static/coffee_machine.jpg');
+        };
+
+    const coffee_mug = () => {
+            coffeeImage.setAttribute('src', 'static/coffee_mug.jpg');
+        };
+
+    const coffee_beans = () => {
+            coffeeImage.setAttribute('src', 'static/coffee_beans.jpg');
+        };
+
+    
+    
     function makeCoffee() {
-        coffeeImage.setAttribute('src', 'static/coffee_machine.jpg');
-        
-        setTimeout(coffeeImage.setAttribute('src', 'static/coffee_machine.jpg'), 1500)
+        coffee_machine;
+        setTimeout(coffee_machine, 1500);
+        setTimeout(coffee_mug, 4000);
+        setTimeout(coffee_beans, 5800); 
     }
 
     // const makeCoffee = () => {
     //     coffeeImage.setAttribute('src', 'static/coffee_mug.jpg');
     // };
-    coffeeImage.addEventListener('click', makeCoffee);
     
+    coffeeImage.addEventListener('click', makeCoffee);
 
-    // coffeeImage.addEventListener('click', () => {
+    // // coffeeImage.addEventListener('click', () => {
         
     //     coffeeImage.setAttribute('src', 'static/coffee_machine.jpg');
     //     // setTimeout(coffeeImage.setAttribute('src', 'static/coffee_machine.jpg'), 1500);
